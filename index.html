@@ -8,6 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0908'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='36' font-weight='700' fill='%23ff4d00' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Malik Uzair Sher — SOC Analyst & Cybersecurity Professional">
+<meta property="og:description" content="SOC L1 Analyst at Quantum Valley Pakistan. SIEM monitoring (Wazuh), alert investigation, log analysis and IT support. BS IT, University of Agriculture Peshawar.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0908">
 <style>
 :root{
   --bg:#0a0908; --panel:#131110; --panel2:#17140f;
@@ -176,6 +181,26 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:26px 0 34px}
 #topBtn{position:fixed;right:22px;bottom:22px;z-index:85;width:50px;height:50px;border-radius:50%;background:var(--acc);border:none;color:#0d0703;font-size:1.15rem;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 12px 28px rgba(255,77,0,.35)}
 #topBtn.show{opacity:1;pointer-events:auto}
 #topBtn:hover{transform:translateY(-4px)}
+
+/* v3 professional additions */
+.meta-row{display:flex;gap:12px 30px;flex-wrap:wrap;margin-top:36px;padding-top:22px;border-top:1px dashed var(--line2);font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.meta-row b{color:var(--ink);font-weight:500}
+#menuBtn{display:none;background:none;border:1px solid var(--line2);border-radius:8px;color:var(--ink);font-size:1.05rem;padding:7px 13px;cursor:pointer}
+#mnav{display:none;border-top:1px solid var(--line);padding:10px 26px 16px;background:rgba(10,9,8,.97)}
+#mnav a{display:block;padding:11px 0;font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px dashed var(--line)}
+#mnav a:last-child{border-bottom:none}
+#mnav.open{display:block}
+@media(max-width:820px){#menuBtn{display:block}.hd .cta{display:none}}
+.ptags{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+.ptag{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;border:1px solid var(--line2);color:var(--mut);border-radius:99px;padding:4px 11px;text-transform:uppercase}
+.cform{margin-top:44px;text-align:left;max-width:640px}
+.cform input,.cform textarea{width:100%;background:var(--panel);border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:var(--body);font-size:.95rem;padding:14px 16px;margin-bottom:13px;outline:none;transition:.25s}
+.cform input:focus,.cform textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(255,77,0,.15)}
+.cform .frow{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:640px){.cform .frow{grid-template-columns:1fr}}
+.cform .fnote{font-family:var(--mono);font-size:.72rem;color:var(--dim);letter-spacing:.06em;margin-top:13px}
+.ft a:hover{color:var(--acc)}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
@@ -189,8 +214,13 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:26px 0 34px}
       <a href="#experience">Experience</a><a href="#projects">Projects</a>
     </nav>
     <a class="cta" href="#contact">Let's Talk ↗</a>
+    <button id="menuBtn" aria-label="Open menu">☰</button>
   </div>
 </header>
+<div id="mnav">
+  <a href="#about">About</a><a href="#work">Expertise</a><a href="#stack">Stack</a>
+  <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="cv.html">CV</a><a href="#contact">Contact</a>
+</div>
 
 <div class="wrap">
   <!-- HERO -->
@@ -209,6 +239,12 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:26px 0 34px}
           <a class="btn solid" href="#experience">See My Work ↓</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/malik-uzair-sher-9523211aa" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a class="btn ghost" href="https://github.com/MalikUzairSher" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn ghost" href="cv.html">⬇ View CV</a>
+        </div>
+        <div class="meta-row">
+          <span>📍 Based in <b>Islamabad, Pakistan</b></span>
+          <span>🛡️ SOC L1 @ <b>Quantum Valley</b></span>
+          <span>✉ Replies <b>within 24 hours</b></span>
         </div>
       </div>
       <div class="stage">
@@ -309,9 +345,9 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:26px 0 34px}
   <!-- PROJECTS -->
   <section class="blk" id="projects">
     <div class="sec-head" data-rv><div class="no">06</div><h2>Projects</h2><div class="mono"><span class="sq"></span>Selected Work</div></div>
-    <div class="proj" data-rv><div class="pn">01</div><div><h3>Online Pharmacy Store</h3><p>Final year project — a complete web-based pharmacy store. Graded A at the University of Agriculture, Peshawar.</p></div><a class="go" href="https://github.com/MalikUzairSher" target="_blank" rel="noopener">GitHub ↗</a></div>
-    <div class="proj" data-rv><div class="pn">02</div><div><h3>Age Calculator</h3><p>Clean, quick age-calculator web app built during the CodeAlpha internship.</p></div><a class="go" href="https://github.com/MalikUzairSher/CodeAlpha_AgeCalculator" target="_blank" rel="noopener">GitHub ↗</a></div>
-    <div class="proj" data-rv><div class="pn">03</div><div><h3>To-Do List App</h3><p>Task manager web app from the CodeAlpha internship series.</p></div><a class="go" href="https://github.com/MalikUzairSher/CodeAlphaTask2_TO-DO-LIST" target="_blank" rel="noopener">GitHub ↗</a></div>
+    <div class="proj" data-rv><div class="pn">01</div><div><h3>Online Pharmacy Store</h3><p>Final year project — a complete web-based pharmacy store. Graded A at the University of Agriculture, Peshawar.</p><div class="ptags"><span class="ptag">Web App</span><span class="ptag">PHP</span><span class="ptag">Database</span><span class="ptag">FYP — Grade A</span></div></div><a class="go" href="https://github.com/MalikUzairSher" target="_blank" rel="noopener">GitHub ↗</a></div>
+    <div class="proj" data-rv><div class="pn">02</div><div><h3>Age Calculator</h3><p>Clean, quick age-calculator web app built during the CodeAlpha internship.</p><div class="ptags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span></div></div><a class="go" href="https://github.com/MalikUzairSher/CodeAlpha_AgeCalculator" target="_blank" rel="noopener">GitHub ↗</a></div>
+    <div class="proj" data-rv><div class="pn">03</div><div><h3>To-Do List App</h3><p>Task manager web app from the CodeAlpha internship series.</p><div class="ptags"><span class="ptag">HTML</span><span class="ptag">JavaScript</span><span class="ptag">Local Storage</span></div></div><a class="go" href="https://github.com/MalikUzairSher/CodeAlphaTask2_TO-DO-LIST" target="_blank" rel="noopener">GitHub ↗</a></div>
   </section>
 
   <!-- CONTACT -->
@@ -324,13 +360,25 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:26px 0 34px}
       <a class="btn ghost" href="https://www.linkedin.com/in/malik-uzair-sher-9523211aa" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn ghost" href="tel:+923098219950">+92 309 8219950</a>
     </div>
+    <form class="cform" action="https://formsubmit.co/malikuzairsher@gmail.com" method="POST" data-rv>
+      <input type="hidden" name="_subject" value="New message from your portfolio website">
+      <input type="hidden" name="_template" value="table">
+      <div class="frow">
+        <input required name="name" placeholder="Your name" aria-label="Your name">
+        <input required type="email" name="email" placeholder="Your email" aria-label="Your email">
+      </div>
+      <input name="subject" placeholder="Subject — e.g. SOC Analyst opportunity" aria-label="Subject">
+      <textarea required name="message" rows="4" placeholder="Your message..." aria-label="Your message"></textarea>
+      <button class="btn solid" type="submit">Send Message ↗</button>
+      <p class="fnote">Messages land directly in my inbox — I usually reply within 24 hours.</p>
+    </form>
   </section>
 </div>
 
 <footer>
   <div class="ft">
     <span>© 2026 Malik Uzair Sher</span>
-    <span>Charsadda · Islamabad · Pakistan</span>
+    <span><a href="#about">About</a> · <a href="#experience">Experience</a> · <a href="#projects">Projects</a> · <a href="cv.html">CV</a></span>
     <span>Local time — <span id="clock">--:--:--</span> PKT</span>
   </div>
 </footer>
@@ -377,6 +425,10 @@ if(matchMedia('(pointer:fine)').matches){
 function clk(){const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Karachi'}));
  document.getElementById('clock').textContent=d.toTimeString().slice(0,8);}
 clk();setInterval(clk,1000);
+// mobile menu
+const mb=document.getElementById('menuBtn'),mn=document.getElementById('mnav');
+mb.addEventListener('click',()=>mn.classList.toggle('open'));
+mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mn.classList.remove('open')));
 </script>
 </body>
 </html>
